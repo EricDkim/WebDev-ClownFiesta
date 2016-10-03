@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Page</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" />
+	<link rel="stylesheet" type="text/css" href="wickedpicker.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	<script src="bootstrap-timepicker.js"></script>
+	<script src="bootstrap-datepicker.js"></script>
+	<script src="wickedpicker.js"></script>
+	
+	<script src="student.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+					<a href="#" class="navbar-brand">Clown Fiesta</a>
+			</div>
+			<div class="collapse navbar-collapse" id="ex1">
+				<ul class="nav navbar-nav navbar-right">
+				
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle glyphicon glyphicon-th-list" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+						<li role="seperator" class="divider"></li>
+						<li><a href="#">Helpful Links</a></li>
+					</ul>
+				</li>
+				</ul>
+			</div>
+		</nav>
+			<div class="col-xs-12">
+				<span>Do you need airport pickup?</span>
+				<input id="yes" type="radio" name="collapseGroup" data-toggle="collapse" data-target="#collapseOne" />Yes
+
+				<input id="no" type="radio" name="collapseGroup" data-toggle="collapse" data-target="#collapseOne" />No
+
+				<div class="panel-group" id="accordian">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">Flight and Airport Info</h4>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="panel-heading">
+									<div class="panel-title text-center">
+										<h2>Flight and Airpot Info</h2>
+										<hr /><!--adds line break-->
+									</div>
+								</div>
+								<div class="main-center">
+									<form class="horizontal-center" method="POST" action="#" name="flight_info">
+									<h4 class="text-center">Enter 'unknown' (without quotation marks) if flight has not been decided yet.</h4>
+									<h5 class="text-center">Pickup and temp housing are based on the flight information, please provide accurate information as soon as possible.</h5>
+										<div class="form-group">
+											<label for="flight_num" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-font" aria-hidden="true"></i></span>
+													<input type="text" class="form-control" name="flight_num" id="flight_num" placeholder="Enter Flight Number">
+												</div><br/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="airline" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-font" aria-hidden="true"></i></span>
+													<input type="text" class="form-control" name="airline" id="airline" placeholder="Enter Airline">
+												</div><br/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="pickdate" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+											<div class="input-group date" data-provide="datepicker">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-th" aria-hidden="true"></i></span>
+										    		<input type="text" class="form-control" name="pickdate" id="pickdate" placeholder="Enter Date">
+								    		</div><br>
+							            	</div>
+										</div>
+										<div class="form-group">
+											<label for="timepicker" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+											<h6>Enter Time</h6>
+											<div class="input-group timepicker">
+												<span class="input-group-addon"><i class="glyphicon glyphicon-time" aria-hidden="true"></i></span>
+									    		<input type="text" class="form-control timepicker" name="timepicker" id="timepicker" placeholder="Enter Time">
+								    		</div><br>
+							            	</div>
+										</div>
+										<div class="form-group">
+											<label for="leave_flight_num" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-plane" aria-hidden="true"></i></span>
+													<input type="text" class="form-control" name="leave_flight_num" id="leave_flight_num" placeholder="Leaving Home Country - Flight Number">
+												</div><br/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="leave_flight_airline" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-plane" aria-hidden="true"></i></span>
+													<input type="text" class="form-control" name="leave_flight_airline" id="leave_flight_airline" placeholder="Leaving Home Country - Airline">
+												</div><br/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="luggage" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+													<select class="form-control" name="luggage" id="luggage" placeholder="How many luggage?">
+														<option value="" selected disabled>How many luggage?</option>
+														<option value="">1</option>
+														<option value="">2</option>
+														<option value="">3</option>
+														<option value="">4+</option>
+													</select>
+												</div><br/>
+											</div>
+										</div>
+										<div class="form-group text-center">
+					  						<label class="col-md-4 control-label" for="submit3"></label>
+											<div class="col-md-4 ">
+												<button id="cancel3" name="cancel" class="btn btn-warning"><a href="index.html">Cancel</a></button>
+												<button id="submit3" name="submit" class="btn btn-success" onclick="return validate(); return false;">Submit</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-xs-12">
+				<span>Do you need housing?</span>
+				<input id="yes2" type="radio" name="collapseGroup" data-toggle="collapse" data-target="#collapseTwo" />Yes
+
+				<input id="no2" type="radio" name="collapseGroup" data-toggle="collapse" data-target="#collapseThree" />No
+
+				<div class="panel panel-default">
+				<div class="panel-heading">
+				<h4 class="panel-title">Housing Info</h4>
+				</div>
+				</div>
+
+				<div class="panel-group" id="accordian1">
+						<div id="collapseTwo" class="panel-collapse collapse">
+						<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">Yes Clicked</h4>
+						</div>
+						
+							<div class="panel-body">
+								<div class="panel-heading">
+									<div class="panel-title text-center">
+										<h2>Stay Inforamtion</h2>
+										<hr /><!--adds line break-->
+									</div>
+								</div>
+								<div class="main-center" id="yesDiv">
+									<form class="horizontal-center" method="POST" action="#" name="house_yes">
+										<div class="form-group">
+											<label for="nights" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+													<select class="form-control" name="nights" id="nights" placeholder="How many luggage?">
+														<option value="" selected disabled>For How Many Nights?</option>
+														<option value="">1</option>
+														<option value="">2</option>
+														<option value="">3</option>
+														<option value="">4</option>
+														<option value="">5</option>
+													</select>
+												</div><br/>
+											</div><br><br/>
+										</div>
+										<div class="panel-title text-center">
+											<h3>Where Should We Send You After?</h3>
+											<hr />
+										</div>
+										<div class="form-group">
+											<label for="address2" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-font" aria-hidden="true"></i></span>
+													<input type="text" class="form-control" name="address2" id="address2" placeholder="Enter Street Address">
+												</div><br/>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="city2" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-font" aria-hidden="true"></i></span>
+													<input type="text" class="form-control" name="city2" id="city2" placeholder="Enter City">
+												</div><br/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="state2" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-font" aria-hidden="true"></i></span>
+													<input type="text" class="form-control" name="state2" id="state2" placeholder="Enter State">
+												</div><br/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="zip2" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-font" aria-hidden="true"></i></span>
+													<input type="text" class="form-control" name="zip2" id="zip2" placeholder="Enter Zip Code">
+												</div><br/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="phone2" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-phone" aria-hidden="true"></i></span>
+													<input type="text" class="form-control" name="phone2" id="phone2"  placeholder="Home Phone Number"/>
+													</div><br>
+											</div>
+										</div>
+										 <div class="form-group text-center">
+					  						<label class="col-md-4 control-label" for="submit"></label>
+											<div class="col-md-4 ">
+												<button id="cancel" name="cancel" class="btn btn-warning"><a href="index.html">Cancel</a></button>
+												<button id="submit" name="submit" class="btn btn-success" 
+													onclick="return validate(); return false;">Submit</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						</div>
+
+				</div>
+				<div class="panel-group" id="accodrian2">
+						<div id="collapseThree" class="panel-collapse collapse">
+						<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">No Clicked</h4>
+						</div>
+							<div class="panel-body">
+								<div class="panel-heading">
+									<div class="panel-title text-center">
+										<h2>Where should we send you?</h2>
+										<hr /><!--adds line break-->
+									</div>
+								</div>
+								<div class="main-center" id="yesDiv">
+									<form class="horizontal-center" method="POST" action="#" name="house_no">
+										<div class="form-group">
+											<label for="address" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-font" aria-hidden="true"></i></span>
+													<input type="text" class="form-control" name="address" id="address" placeholder="Enter Street Address">
+												</div><br/>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="city" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-font" aria-hidden="true"></i></span>
+													<input type="text" class="form-control" name="city" id="city" placeholder="Enter City">
+												</div><br/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="state" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-font" aria-hidden="true"></i></span>
+													<input type="text" class="form-control" name="state" id="state" placeholder="Enter State">
+												</div><br/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="zip" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-font" aria-hidden="true"></i></span>
+													<input type="text" class="form-control" name="zip" id="zip" placeholder="Enter Zip Code">
+												</div><br/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="phone" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-phone" aria-hidden="true"></i></span>
+													<input type="text" class="form-control" name="phone" id="phone"  placeholder="Home Phone Number"/>
+													</div><br><br>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="comment" class="col-md-4 control-label"></label>
+											<div class="col-md-5">
+												<div class="input-group">
+										    	<textarea class="form-control" id="comment" rows="3"></textarea>
+										    	</div><br><br>
+										    </div>
+									  	</div>	
+										<div class="form-group text-center">
+					  						<label class="col-md-4 control-label" for="submit2"></label>
+											<div class="col-md-4 ">
+												<button id="cancel2" name="cancel" class="btn btn-warning"><a href="index.html">Cancel</a></button>
+												<button id="submit2" name="submit" class="btn btn-success" onclick="return validate(); return false;">Submit</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+        $("#main input").datepicker();
+   		 });
+		$('.timepicker').wickedpicker();
+
+		// document.getElementById("yes2").onclick = function(){
+		// 	document.getElementById("accordian1").style.display = "block";
+		// }
+		// document.getElementById("no2").onclick = function(){
+		// 	document.getElementById("accordian2").style.display = "block";
+		// }
+		if(document.getElementById("yes2").onclick){
+			function showYes(){
+				document.getElementById("accordian1").style.display = "block";
+			}
+		} else if(document.getElementById("no2").onclick){
+				document.getElementById("accordian2").style.display = "block";
+		}
+
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+

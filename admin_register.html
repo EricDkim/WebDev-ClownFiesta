@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin | Register</title>
+</head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="student_register.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		/*function printFrom(){
+			document.getElementById('showData').innerHTML = document.getElementById('first_name').value;
+		}*/
+		function validate(){
+			document.getElementById('showData').innerHTML = document.getElementById('first_name').value;
+			document.getElementById('showData1').innerHTML = document.getElementById('last_name').value;
+			
+			//can't get gender to print out
+			// if(document.getElementById('gender-0').checked){
+			// 	document.getElementById('showData2').innerHTML = document.getElementById('gender-0').value;
+			// }
+			// if(document.getElementById('gender-1').checked){
+			// 	document.getElementById('showData2').innerHTML = document.getElementById('gender-0').value;
+			// }
+
+			// var gender = document.getElementById('thisVal').value;
+			// var gender_value;
+			// if(gender == 'Male'){
+			// 	document.getElementById('showData2').innerHTML = document.getElementById('gender-0').value;
+			// }
+			
+			document.getElementById('showData3').innerHTML = document.getElementById('level').value;
+			document.getElementById('showData4').innerHTML = document.getElementById('major').value;
+			document.getElementById('showData5').innerHTML = document.getElementById('email').value;
+			document.getElementById('showData6').innerHTML = document.getElementById('phone').value;
+			document.getElementById('showData7').innerHTML = document.getElementById('username').value;
+			//document.getElementById('showData8').innerHTML = document.getElementById('password').value;
+			return false;
+		}
+	</script>
+<body>
+	<div class="container-fluid">
+	<nav class="navbar navbar-default">
+			<div class="navbar-header">
+					<a href="#" class="navbar-brand">Clown Fiesta</a>
+			</div>
+			<div class="collapse navbar-collapse" id="ex1">
+				<ul class="nav navbar-nav navbar-right">
+				<li><a href="index.html">Login</a></li>
+				<li class="dropdown">
+					<a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Register<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+						<li><a href="student_register.html">Student</a></li>
+						<li><a href="volunteer_register.html">Volunteer</a></li>
+						<li class="active"><a href="admin_register.html">Admin<span class="sr-only">(current)</span></a></li>
+						<li role="seperator" class="divider"></li>
+						<li><a href="#">Helpful Links</a></li>
+					</ul>
+				</li>
+				</ul>
+			</div>
+	</nav>
+		<div class="row main">
+			<div class="panel-heading">
+				<div class="panel-title text-center">
+					<h1>Admin Registration</h1>
+					<hr /><!--adds line break-->
+				</div>
+			</div>
+			<div class="main-login main-center">
+
+				<form class="form-horizontal" method="POST" action="#" name="student_registration">
+					<div class="form-group">
+						<label for="first_name" class="col-md-4 control-label">First Name</label>
+						<div class="col-md-5">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-font" aria-hidden="true"></i></span>
+								<input type="text" class="form-control" name="first_name" id="first_name" placeholder="First Name (English Please)">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="last_name" class="col-md-4 control-label">Last Name</label>
+						<div class="col-md-5">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-bold" aria-hidden="true"></i></span>
+								<input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name (English Please)">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="gender">Gender</label>
+						<div class="col-md-4">
+							<div class="input-group">
+							<label class="radio-inline" for="gender" id="gender-0">
+								<div id="thisVal"><input type="radio" name="gender" id="gender-0" value="Male" checked="checked">Male<br></div>
+							</label>
+							<label class="radio-inline" for="gender" id="gender-1">
+								<div id="thisVal2"><input type="radio" name="gender" id="gender-1" value="Female" checked="checked">Female</div>
+							</label>
+							
+							</div>
+						</div>
+					</div>
+			         <div class="form-group">
+						<label for="major" class="col-md-4 control-label">Affiliation</label>
+						<div class="col-md-5">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-education" aria-hidden="true"></i></span>
+								<input type="text" class="form-control" name="aff" id="aff" placeholder="Affiliation/Recommended By:">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="email" class="col-md-4 control-label">Your Email</label>
+						<div class="col-md-5">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+								<input type="text" class="form-control" name="email" id="email"  placeholder="Email"/>
+								</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="email" class="col-md-4 control-label">Mobile Phone</label>
+						<div class="col-md-5">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-phone" aria-hidden="true"></i></span>
+								<input type="text" class="form-control" name="mphone" id="mphone"  placeholder="Mobile Phone Number"/>
+								</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="username" class="col-md-4 control-label">Username</label>
+						<div class="col-md-5">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+								<input type="text" class="form-control" name="username" id="username"  placeholder="Username"/>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="password" class="col-md-4 control-label">Password</label>
+						<div class="col-md-5">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+								<input type="text" class="form-control" name="password" id="password"  placeholder="Password"/>
+							</div>
+						</div>
+					</div>
+					<div class="form-group text-center">
+  						<label class="col-md-4 control-label" for="submit"></label>
+						<div class="col-md-4 ">
+							<button id="cancel" name="cancel" class="btn btn-warning"><a href="index.html">Cancel</a></button>
+							<button id="submit" name="submit" class="btn btn-success"><a href="admin_complete.html">Submit</a></button>
+							<!--
+							<button id="submit" name="submit" class="btn btn-success" 
+								onclick="return validate(); return false;">Submit</button>
+							-->
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="text-center">
+				<h3>Your input:</h3>
+				<p><span id="showData"></span></p>
+				<p><span id="showData1"></span></p>
+				<p><span id="showData2"></span></p>
+				<p><span id="showData3"></span></p>
+				<p><span id="showData4"></span></p>
+				<p><span id="showData5"></span></p>
+				<p><span id="showData6"></span></p>
+				<p><span id="showData7"></span></p>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
